@@ -1,4 +1,4 @@
-import pygame
+import pygame as pg
 import pytest
 
 
@@ -111,8 +111,8 @@ def test_elements_exist(element_type, element_name, _the_snake):
 @pytest.mark.parametrize(
     'expected_type, var_name',
     (
-        (pygame.Surface, 'screen'),
-        (pygame.time.Clock, 'clock'),
+        (pg.Surface, 'screen'),
+        (pg.time.Clock, 'clock'),
     ),
 )
 def test_vars_type(expected_type, var_name, _the_snake):
